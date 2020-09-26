@@ -1,0 +1,6 @@
+Added Component: Designator=J2(XLR)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC3_2 Pin=J2-1
+Added Pin To Net: NetName=NetC3_1 Pin=J2-2
+Added Pin To Net: NetName=NetC10_1 Pin=J2-3
+Added Member To Class: ClassName=PreAmp Member=Component J2 XLR

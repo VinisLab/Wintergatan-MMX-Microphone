@@ -1,0 +1,11 @@
+%FSTAX25Y25*%
+%MOMM*%
+%SFA1B1*%
+
+%IPPOS*%
+%ADD37C,2.999994*%
+%LNmicamp_npth_drill-1*%
+%LPD*%
+G54D37*
+X-4699998Y0D03*
+M02*

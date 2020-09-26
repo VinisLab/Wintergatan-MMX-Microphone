@@ -1,0 +1,31 @@
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : Project [MicPreAmp.PrjPCB]
+   Generated File[MicAmp_Copper_Signal_Top.gbr]
+   Generated File[MicAmp_Copper_Signal_Bot.gbr]
+   Generated File[MicAmp_Pads_Bot.gbr]
+   Generated File[MicAmp_Pads_Top.gbr]
+   Generated File[MicAmp_Legend_Bot.gbr]
+   Generated File[MicAmp_Soldermask_Bot.gbr]
+   Generated File[MicAmp_Paste_Bot.gbr]
+   Generated File[MicAmp_Legend_Top.gbr]
+   Generated File[MicAmp_Paste_Top.gbr]
+   Generated File[MicAmp_Soldermask_Top.gbr]
+   Generated File[MicAmp_Keep-out.gbr]
+   Generated File[MicAmp_Mechanical_13.gbr]
+   Generated File[MicAmp_Mechanical_1.gbr]
+   Generated File[MicAmp_Mechanical_15.gbr]
+   Generated File[MicAmp_Profile.gbr]
+   Generated File[MicAmp_NPTH_Drill.gbr]
+   Generated File[MicAmp_PTH_Drill.gbr]
+   Generated File[MicAmp_Drawing_1.gbr]
+   Generated File[MicAmp_Drillmap_1.gbr]
+   Generated File[MicAmp.RUL]
+   Generated File[MicAmp.EXTREP]
+   Generated File[MicAmp.REP]
+
+
+Files Generated   : 22
+Documents Printed : 0
+
+Finished Output Generation At 15:03:26 On 10/09/2020

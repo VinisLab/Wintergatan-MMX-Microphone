@@ -1,0 +1,15 @@
+%FSTAX25Y25*%
+%MOMM*%
+%SFA1B1*%
+
+%IPPOS*%
+%ADD46C,0.025400*%
+%LNdevboard_profile-1*%
+%LPD*%
+G54D46*
+X0Y0D02*
+Y4749998D01*
+X5299999*
+Y0*
+X0*
+M02*

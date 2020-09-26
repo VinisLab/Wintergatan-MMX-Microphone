@@ -1,0 +1,6 @@
+Added Component: Designator=FID1(FIDUCIAL)
+Add component. Clean all parameters for all variants
+Added Component: Designator=FID2(FIDUCIAL)
+Add component. Clean all parameters for all variants
+Added Member To Class: ClassName=PreAmp Member=Component FID1 FIDUCIAL
+Added Member To Class: ClassName=PreAmp Member=Component FID2 FIDUCIAL

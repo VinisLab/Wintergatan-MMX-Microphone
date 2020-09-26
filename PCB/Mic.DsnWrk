@@ -1,0 +1,6 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=MicPreAmp.PrjPCB
+[Project2]
+ProjectPath=..\..\Philips-PM2534\PCB\PM2534-FrontPanel.PrjPCB

@@ -1,0 +1,6 @@
+Added Component: Designator=L5(2220)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Inductance"; Value = "27uH"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=L5-1
+Added Pin To Net: NetName=NetC3_2 Pin=L5-2
+Added Member To Class: ClassName=PreAmp Member=Component L5 27uH

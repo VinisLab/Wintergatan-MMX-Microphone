@@ -1,0 +1,14 @@
+Change Component Comment : Designator=R4 Old Comment=3K3 New Comment=2K2
+Change Component Comment : Designator=R5 Old Comment=3K3 New Comment=2K2
+Change Component Comment : Designator=C2 Old Comment=82nF New Comment=0.1uF
+Change component parameters: Designator = "R4"; Footprint = "MMA0204"; UniqueID = "\PIJNHMHQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "2K2"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R5"; Footprint = "MMA0204"; UniqueID = "\TUKMOFEX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "2K2"; VariantName = "[No Variations]"
+Added Component: Designator=D1(SOD80C)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC1_1 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Member To Class: ClassName=PreAmp Member=Component D1 10 Volts

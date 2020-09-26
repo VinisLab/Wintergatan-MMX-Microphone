@@ -1,0 +1,417 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">28/06/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:04:42</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc" class="file"><acronym title="C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc">C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">23</td></tr>
+</table>
+</td>
+</table><a name="ID5Y03JHODAUBJMFAV2PAWLELNXHA4MI4WSZPV5IVVR24ND4VNBQD"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUTJXCAQ2M4VYJCR5FERELULWECMYKKK1QHC23ADFOTU3SYT2HMD">Clearance Constraint (Gap=0.2mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXMLKICPNSTZXKEOJW3JXDWCBPLGYSTJI0C0EYJJZMYRUIIZYZEXG">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJTMO553J1SXHDWAVDL2LDG0UXHB0B0GDK4NLOMBEWXWG1ZPTY1JK">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDOE5E5SXO0DQNDXVNJQT1FRJMRHGHP2JBX53513HF5NUN5ZMAJGKJ">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDU4BMO3LMBXWHCQJX0A3BLX0EDKIUV30QXPQGCWJNVGWJMJPUOV4E">Width Constraint (Min=0.3mm) (Max=1mm) (Preferred=0.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCSPY04LJX5LQEGOXRVKM14QHXOPIJAKTUTPM4ZLI224UDQR1NIJK">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1PCH1GXXO4JSJAGV0SLVWYPGTB2KIQJKYENGKJGVZH2H0IFGXY1C">Hole Size Constraint (Min=0.3mm) (Max=8mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRTGYXTBN2ORPL3MNVXQROIMHOLT4XZZKVERXRRM3TIF5FJR0IU0C">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIFTKVQMNB4UDEOYCANLDX2NEXO3KVKCV4PNBENIBLTSUEAOJWJRP">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVKZCWU4LPT2TKOPHQNIQ1N0PNFY4GJBHSFP320J0X2LSBZ3UVC3H">Silk To Solder Mask (Clearance=0.2mm) (IsPad),(All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHNVGH5FJDOAQCLPXUK0GEZ0U3IEGHWJQ4ICW0JVSLAMK3UJJ02K">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDINSGS1RPTI2YH4BPCHFV541Q4BKI2ZHT01TCCUU5UCI5NQHQJLN">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDXIQGVYAQPQCGF1AOEXWCO2BSHWAHMADANKGBWGNHPVYWCMVM3DC">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">17</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3DP1BQY0ED0DJWO33FPLBK3P2OQWGTJOUWOQB3PIDGRD3BMJMKBB">Room PreAmp (Bounding Region = (54.25mm, 55mm, 142.25mm, 71mm) (InComponentClass('PreAmp'))</a></td>
+<td class="column2">1</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWTGS1MGOHF5GGK3HJ5OHPH1TQNXXB1TC40UYW5C403AP3EJFJP0I">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">23</td>
+</tr>
+</table><br><a name="IDIFTKVQMNB4UDEOYCANLDX2NEXO3KVKCV4PNBENIBLTSUEAOJWJRP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.1mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.477mil|Location2.X=2435.664mil|Location1.Y=2456.56mil|Location2.Y=2461.747mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.477mil|Location2.X=2435.664mil|Location1.Y=2456.56mil|Location2.Y=2461.747mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.025mm &lt; 0.1mm) Between Pad C10-2(6.8mm,4.75mm) on Top Layer And Via (6.8mm,7.875mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.025mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.477mil|Location2.X=2435.664mil|Location1.Y=2489.04mil|Location2.Y=2494.227mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2430.477mil|Location2.X=2435.664mil|Location1.Y=2489.04mil|Location2.Y=2494.227mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.025mm &lt; 0.1mm) Between Pad C11-1(6.8mm,11mm) on Top Layer And Via (6.8mm,7.875mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.025mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDVKZCWU4LPT2TKOPHQNIQ1N0PNFY4GJBHSFP320J0X2LSBZ3UVC3H"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.2mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4158.792mil|Location2.X=4167.916mil|Location1.Y=2402.951mil|Location2.Y=2412.075mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4158.792mil|Location2.X=4167.916mil|Location1.Y=2402.951mil|Location2.Y=2412.075mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.098mm &lt; 0.2mm) Between Pad R16-1(50.975mm,6.975mm) on Top Layer And Text "R16" (48.25mm,4.975mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4060.399mil|Location2.X=4069.523mil|Location1.Y=2402.951mil|Location2.Y=2412.075mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4060.399mil|Location2.X=4069.523mil|Location1.Y=2402.951mil|Location2.Y=2412.075mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.098mm &lt; 0.2mm) Between Pad R16-2(48.025mm,6.975mm) on Top Layer And Text "R16" (48.25mm,4.975mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.098mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3119.569mil|Location2.X=3128.693mil|Location1.Y=2512.737mil|Location2.Y=2521.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3119.569mil|Location2.X=3128.693mil|Location1.Y=2512.737mil|Location2.Y=2521.861mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.195mm &lt; 0.2mm) Between Pad S1-5(24mm,9.65mm) on Multi-Layer And Text "S1" (24.25mm,7.25mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.195mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDDXIQGVYAQPQCGF1AOEXWCO2BSHWAHMADANKGBWGNHPVYWCMVM3DC"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5360.584mil|Location2.X=5368.145mil|Location1.Y=2316.692mil|Location2.Y=2324.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5360.584mil|Location2.X=5368.145mil|Location1.Y=2316.692mil|Location2.Y=2324.253mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Pad J1-1(79mm,3.94mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5360.584mil|Location2.X=5368.145mil|Location1.Y=2636.377mil|Location2.Y=2643.938mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5360.584mil|Location2.X=5368.145mil|Location1.Y=2636.377mil|Location2.Y=2643.938mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Pad J1-2(79mm,12.06mm) on Multi-Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2684.195mil|Location2.X=2698.372mil|Location1.Y=2232.797mil|Location2.Y=2243.889mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2684.195mil|Location2.X=2698.372mil|Location1.Y=2232.797mil|Location2.Y=2243.889mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.25mm &lt; 0.25mm) Between Board Edge And Polygon Region (46 hole(s)) Middle Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2684.195mil|Location2.X=2698.372mil|Location1.Y=2232.797mil|Location2.Y=2243.889mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2684.195mil|Location2.X=2698.372mil|Location1.Y=2232.797mil|Location2.Y=2243.889mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.25mm &lt; 0.25mm) Between Board Edge And Polygon Region (52 hole(s)) Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.461mil|Location2.X=2692.554mil|Location1.Y=2233.548mil|Location2.Y=2244.64mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2681.461mil|Location2.X=2692.554mil|Location1.Y=2233.548mil|Location2.Y=2244.64mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.246mm &lt; 0.25mm) Between Board Edge And Text "C7" (15mm,2.25mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2682.183mil|Location2.X=2689.745mil|Location1.Y=2724.628mil|Location2.Y=2732.19mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2682.183mil|Location2.X=2689.745mil|Location1.Y=2724.628mil|Location2.Y=2732.19mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Text "C8" (14.871mm,11.56mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4713.942mil|Location2.X=4725.034mil|Location1.Y=2164.237mil|Location2.Y=2175.329mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4713.942mil|Location2.X=4725.034mil|Location1.Y=2164.237mil|Location2.Y=2175.329mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.225mm &lt; 0.25mm) Between Board Edge And Track (64.25mm,1.25mm)(64.875mm,0.625mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4721.227mil|Location2.X=4732.32mil|Location1.Y=2786.974mil|Location2.Y=2798.066mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4721.227mil|Location2.X=4732.32mil|Location1.Y=2786.974mil|Location2.Y=2798.066mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.14mm &lt; 0.25mm) Between Board Edge And Track (64.65mm,15.05mm)(65.06mm,15.46mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.239mil|Location2.X=4806.332mil|Location1.Y=2164.237mil|Location2.Y=2175.329mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.239mil|Location2.X=4806.332mil|Location1.Y=2164.237mil|Location2.Y=2175.329mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.225mm &lt; 0.25mm) Between Board Edge And Track (64.875mm,0.625mm)(66.94mm,0.625mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4721.227mil|Location2.X=4732.32mil|Location1.Y=2786.974mil|Location2.Y=2798.066mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4721.227mil|Location2.X=4732.32mil|Location1.Y=2786.974mil|Location2.Y=2798.066mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.14mm &lt; 0.25mm) Between Board Edge And Track (65.06mm,15.46mm)(66.94mm,15.46mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.239mil|Location2.X=4806.332mil|Location1.Y=2164.237mil|Location2.Y=2175.329mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.239mil|Location2.X=4806.332mil|Location1.Y=2164.237mil|Location2.Y=2175.329mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.225mm &lt; 0.25mm) Between Board Edge And Track (66.94mm,0.625mm)(67.35mm,1.035mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.239mil|Location2.X=4806.332mil|Location1.Y=2786.974mil|Location2.Y=2798.066mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4795.239mil|Location2.X=4806.332mil|Location1.Y=2786.974mil|Location2.Y=2798.066mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.14mm &lt; 0.25mm) Between Board Edge And Track (66.94mm,15.46mm)(67.35mm,15.05mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5281.845mil|Location2.X=5289.407mil|Location1.Y=2316.692mil|Location2.Y=2324.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5281.845mil|Location2.X=5289.407mil|Location1.Y=2316.692mil|Location2.Y=2324.253mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Track (69.31mm,3.94mm)(79mm,3.94mm) on Middle Top </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5281.845mil|Location2.X=5289.407mil|Location1.Y=2636.377mil|Location2.Y=2643.938mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5281.845mil|Location2.X=5289.407mil|Location1.Y=2636.377mil|Location2.Y=2643.938mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Track (69.56mm,12.06mm)(79mm,12.06mm) on Middle Bottom </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5279.838mil|Location2.X=5287.4mil|Location1.Y=2593.681mil|Location2.Y=2601.243mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5279.838mil|Location2.X=5287.4mil|Location1.Y=2593.681mil|Location2.Y=2601.243mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Track (74.465mm,6.525mm)(79mm,11.06mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5276.828mil|Location2.X=5284.389mil|Location1.Y=2316.692mil|Location2.Y=2324.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5276.828mil|Location2.X=5284.389mil|Location1.Y=2316.692mil|Location2.Y=2324.253mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Track (75.94mm,3.94mm)(79mm,3.94mm) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5275.824mil|Location2.X=5283.386mil|Location1.Y=2616.691mil|Location2.Y=2624.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5275.824mil|Location2.X=5283.386mil|Location1.Y=2616.691mil|Location2.Y=2624.253mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.25mm) Between Board Edge And Track (79mm,11.06mm)(79mm,12.06mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID3DP1BQY0ED0DJWO33FPLBK3P2OQWGTJOUWOQB3PIDGRD3BMJMKBB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Room PreAmp (Bounding Region = (54.25mm, 55mm, 142.25mm, 71mm) (InComponentClass('PreAmp'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2135.827mil|Location2.X=5600.394mil|Location1.Y=2161.417mil|Location2.Y=2799.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Github\Wintergatan-MMX-Microphone\PCB\MicAmp.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2135.827mil|Location2.X=5600.394mil|Location1.Y=2161.417mil|Location2.Y=2799.213mil|Absolute=True">Room Definition: Between Room PreAmp (Bounding Region = (54.25mm, 55mm, 142.25mm, 71mm) (InComponentClass('PreAmp')) And Small Component J1-XLR (79mm,8mm) on Top Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

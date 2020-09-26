@@ -1,0 +1,18 @@
+CAMtasticDXP Drill Report
+Serial Number:0000-00-00000
+Drill File: C:\Github\Wintergatan-MMX-Microphone\PCB\Gerber\cam.drl
+Format: 2.3
+Units: Metric (mm.)
+Step & Repeat Codes Used: NO
+
+
+TOOL		SIZE		COUNT
+====		======		=====
+
+ 1 		0.8000		8
+ 2 		0.5000		3
+ 3 		8.0000		2
+ 4 		1.0000		1
+ 5 		0.7620		8
+ 6 		0.3000		4
+ 7 		0.4000		19

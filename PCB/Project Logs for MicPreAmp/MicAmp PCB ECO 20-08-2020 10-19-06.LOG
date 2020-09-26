@@ -1,0 +1,170 @@
+Removed Pin From Net: NetName=NetC3_1 Pin=C12-1
+Removed Pin From Net: NetName=GND Pin=C13-2
+Removed Pin From Net: NetName=GND Pin=C14-2
+Removed Pin From Net: NetName=GND Pin=C16-2
+Removed Pin From Net: NetName=GND Pin=C17-2
+Removed Pin From Net: NetName=NetC3_1 Pin=J1-1
+Removed Pin From Net: NetName=NetC3_2 Pin=J1-2
+Removed Pin From Net: NetName=NetC3_2 Pin=L2-2
+Removed Pin From Net: NetName=NetC13_1 Pin=L2-4
+Removed Pin From Net: NetName=NetC13_1 Pin=L3-2
+Removed Pin From Net: NetName=GND Pin=L4-1
+Removed Pin From Net: NetName=NetC3_1 Pin=L4-2
+Removed Pin From Net: NetName=GND Pin=R1-2
+Removed Pin From Net: NetName=NetC6_2 Pin=R3-1
+Removed Pin From Net: NetName=GND Pin=R7-2
+Removed Pin From Net: NetName=GND Pin=R17-1
+Removed Pin From Net: NetName=NetC4_1 Pin=S1-1
+Removed Pin From Net: NetName=GND Pin=U1-4
+Removed Pin From Net: NetName=GND Pin=U1-9
+Removed Pin From Net: NetName=NetC6_2 Pin=U2-4
+Removed Pin From Net: NetName=GND Pin=U2-6
+Removed Pin From Net: NetName=GND Pin=U3-4
+Removed Member From Class: ClassName=PreAmp Member=C7
+Removed Member From Class: ClassName=PreAmp Member=C8
+Removed Member From Class: ClassName=PreAmp Member=C10
+Removed Member From Class: ClassName=PreAmp Member=C11
+Removed Member From Class: ClassName=PreAmp Member=C12
+Removed Member From Class: ClassName=PreAmp Member=C14
+Removed Member From Class: ClassName=PreAmp Member=C15
+Removed Member From Class: ClassName=PreAmp Member=C16
+Removed Member From Class: ClassName=PreAmp Member=C17
+Removed Member From Class: ClassName=PreAmp Member=L1
+Removed Member From Class: ClassName=PreAmp Member=L2
+Removed Member From Class: ClassName=PreAmp Member=L3
+Removed Member From Class: ClassName=PreAmp Member=L4
+Removed Member From Class: ClassName=PreAmp Member=R15
+Removed Member From Class: ClassName=PreAmp Member=R16
+Removed Member From Class: ClassName=PreAmp Member=R17
+Removed Member From Class: ClassName=PreAmp Member=S1
+Removed Member From Class: ClassName=PreAmp Member=U1
+Removed Member From Class: ClassName=PreAmp Member=U2
+Removed Member From Class: ClassName=PreAmp Member=U3
+Change Component Footprint: Designator=C4 Old Footprint=C1210 New Footprint=UFW1J330MED
+Change Component Footprint: Designator=C5 Old Footprint=C1210 New Footprint=UFW1J330MED
+Change Component Footprint: Designator=C3 Old Footprint=C2220 New Footprint=C1210
+Change Component Comment : Designator=R3 Old Comment=1K New Comment=5K6
+Change Component Comment : Designator=R14 Old Comment=1K New Comment=33K
+Change Component Comment : Designator=C4 Old Comment=1uF New Comment=33uF
+Change Component Comment : Designator=C5 Old Comment=1uF New Comment=33uF
+Change Component Comment : Designator=R12 Old Comment=2K6 New Comment=33K
+Change Component Comment : Designator=R1 Old Comment=3K4 New Comment=220R
+Change Component Comment : Designator=R6 Old Comment=16K5 New Comment=33K
+Change Component Comment : Designator=R2 Old Comment=40.2K New Comment=100K
+Change Component Comment : Designator=R8 Old Comment=75R New Comment=100R
+Change Component Comment : Designator=R9 Old Comment=75R New Comment=100R
+Change Component Comment : Designator=C13 Old Comment=82nF New Comment=1nF
+Change Component Comment : Designator=C3 Old Comment=160nF New Comment=1uF
+Change Component Comment : Designator=R13 Old Comment=230K New Comment=10K
+Change Component Comment : Designator=R7 Old Comment=390R New Comment=33K
+Change Component Comment : Designator=R10 Old Comment=390R New Comment=100K
+Change Component Comment : Designator=C1 Old Comment=CE New Comment=33uF
+Change component parameters: Designator = "R1"; Footprint = "MMA0204"; UniqueID = "\TRXXQFDP"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "220R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R2"; Footprint = "MMA0204"; UniqueID = "\HICSCFWB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "100K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R3"; Footprint = "MMA0204"; UniqueID = "\KNSPQQRB"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "5K6"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R6"; Footprint = "MMA0204"; UniqueID = "\WSQWRRTT"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "33K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R7"; Footprint = "MMA0204"; UniqueID = "\AULLTJCI"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "33K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R8"; Footprint = "MMA0204"; UniqueID = "\FFSJRJXO"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "100R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R9"; Footprint = "MMA0204"; UniqueID = "\DVKEVYLA"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "100R"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R10"; Footprint = "MMA0204"; UniqueID = "\BDJBBDBE"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "100K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R12"; Footprint = "MMA0204"; UniqueID = "\AQQOEWTQ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "33K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R13"; Footprint = "MMA0204"; UniqueID = "\KVQFMHGY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "10K"; VariantName = "[No Variations]"
+Change component parameters: Designator = "R14"; Footprint = "MMA0204"; UniqueID = "\QTEIHCLS"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Resistance"; Value = "33K"; VariantName = "[No Variations]"
+Added Component: Designator=C2(C0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=FID1(FIDUCIAL)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Q1(TO-236/SC-59/SOT-23)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Q2(TO-236/SC-59/SOT-23)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Q3(TO-236/SC-59/SOT-23)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Q4(TO-236/SC-59/SOT-23)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=NetC13_1 Pin=J1-2
+Added Pin To Net: NetName=NetC3_1 Pin=J2-2
+Added Pin To Net: NetName=NetC6_2 Pin=Q2-3
+Added Pin To Net: NetName=NetC3_2 Pin=Q3-1
+Added Pin To Net: NetName=GND Pin=Q4-2
+Added Pin To Net: NetName=NetC6_2 Pin=Q4-3
+Added Pin To Net: NetName=NetC4_1 Pin=R2-1
+Added Pin To Net: NetName=NetC13_1 Pin=R5-1
+Added Pin To Net: NetName=GND Pin=R6-1
+Added Pin To Net: NetName=NetC6_2 Pin=R7-2
+Added Pin To Net: NetName=NetC13_1 Pin=R8-2
+Added Pin To Net: NetName=NetC4_1 Pin=R10-1
+Added Pin To Net: NetName=NetC3_2 Pin=R10-2
+Added Pin To Net: NetName=NetC3_1 Pin=R11-1
+Added Pin To Net: NetName=GND Pin=R12-1
+Added Pin To Net: NetName=GND Pin=R14-1
+Added Pin To Net: NetName=NetC4_1 Pin=R14-2
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=C2-1
+Added Pin To Net: NetName=NetC1_1 Pin=Q1-2
+Added Pin To Net: NetName=NetC1_1 Pin=R1-1
+Added Pin To Net: NetName=NetC1_1 Pin=R2-2
+Added Pin To Net: NetName=NetC1_1 Pin=R3-1
+Added Pin To Net: NetName=NetC1_1 Pin=R4-2
+Added Pin To Net: NetName=NetC1_1 Pin=R5-2
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=R13-1
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC13_2 Pin=C13-2
+Added Pin To Net: NetName=NetC13_2 Pin=J1-3
+Added Pin To Net: NetName=NetC13_2 Pin=R4-1
+Added Pin To Net: NetName=NetC13_2 Pin=R9-2
+Added Net: Name=NetC13_2
+Added Pin To Net: NetName=NetJ2_3 Pin=J2-3
+Added Pin To Net: NetName=NetJ2_3 Pin=R3-2
+Added Net: Name=NetJ2_3
+Added Pin To Net: NetName=NetQ1_1 Pin=Q1-1
+Added Pin To Net: NetName=NetQ1_1 Pin=Q2-2
+Added Pin To Net: NetName=NetQ1_1 Pin=R1-2
+Added Net: Name=NetQ1_1
+Added Pin To Net: NetName=NetQ1_3 Pin=Q1-3
+Added Pin To Net: NetName=NetQ1_3 Pin=Q2-1
+Added Pin To Net: NetName=NetQ1_3 Pin=R6-2
+Added Net: Name=NetQ1_3
+Added Pin To Net: NetName=NetQ3_2 Pin=Q3-2
+Added Pin To Net: NetName=NetQ3_2 Pin=R7-1
+Added Pin To Net: NetName=NetQ3_2 Pin=R13-2
+Added Net: Name=NetQ3_2
+Added Pin To Net: NetName=NetQ3_3 Pin=Q3-3
+Added Pin To Net: NetName=NetQ3_3 Pin=Q4-1
+Added Pin To Net: NetName=NetQ3_3 Pin=R12-2
+Added Net: Name=NetQ3_3
+Added Member To Class: ClassName=PreAmp Member=Component C2 82nF
+Added Member To Class: ClassName=PreAmp Member=Component FID1 FIDUCIAL
+Added Member To Class: ClassName=PreAmp Member=Component Q1 2SA1163
+Added Member To Class: ClassName=PreAmp Member=Component Q2 2SA1163
+Added Member To Class: ClassName=PreAmp Member=Component Q3 2SA1163
+Added Member To Class: ClassName=PreAmp Member=Component Q4 2SC2713

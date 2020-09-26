@@ -1,0 +1,10 @@
+Added Component: Designator=S1(SSSS223600)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC6_2 Pin=S1-2
+Added Pin To Net: NetName=NetC7_1 Pin=S1-3
+Added Pin To Net: NetName=NetC8_2 Pin=S1-4
+Added Pin To Net: NetName=NetC2_- Pin=S1-5
+Added Pin To Net: NetName=NetC7_2 Pin=S1-6
+Added Pin To Net: NetName=NetQ3_1 Pin=S1-7
+Added Pin To Net: NetName=NetC9_2 Pin=S1-8
+Added Member To Class: ClassName=PreAmp Member=Component S1 SSSS223600
